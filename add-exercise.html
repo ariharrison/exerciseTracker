@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="/public/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script
+      src="https://kit.fontawesome.com/fda19063e7.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div class="body-wrapper">
+      <div class="signup-wrapper2">
+        <div class="form-wrapper">
+          <form
+            action="/api/add-exercise"
+            method="POST"
+            class="form"
+            autocomplete="off"
+          >
+            <input
+              type="text"
+              name="username"
+              pattern="^[A-Za-z0-9]{3,15}$"
+              title="Only letters and numbers. Min 3, max 15 characters allowed"
+              required
+              class="input-item"
+              placeholder="Username"
+            />
+            <input
+              type="text"
+              name="exercisename"
+              pattern="^[a-zA-Z]+( [a-zA-Z]+)*$"
+              class="input-item"
+              required
+              placeholder="Exercise Name"
+            />
+            <input
+              type="number"
+              name="duration"
+              min="1"
+              max="240"
+              required
+              class="input-item"
+              placeholder="Exercise Duration in minutes"
+            />
+            <button type="submit" class="add-username-button">
+              Add Exercise
+            </button>
+          </form>
+          <button
+            class="add-username-button"
+            type="submit"
+            style="background-color: #444C55"
+            onclick=" window.location.href='/'"
+          >
+            ← Back to Home
+          </button>
+        </div>
+      </div>
+      <div class="footer">
+        <a href=" https://github.com/ariharrison" target="_blank"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a href="https://www.linkedin.com/in/folamiharrison/" target="_blank"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <p>
+          For
+          <a
+            href="https://learn.freecodecamp.org/apis-and-microservices/apis-and-microservices-projects/request-header-parser-microservice/"
+            target="_blank"
+            >Free Code Camp Project</a
+          >
+        </p>
+        <p>
+          Copyright ©
+          <a href="https://www.freecodecamp.org/ariharrison" target="_blank"
+            >Ari Harrison.</a
+          >
+          All right reserved.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
